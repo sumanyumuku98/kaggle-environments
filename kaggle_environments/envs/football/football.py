@@ -176,7 +176,7 @@ def interpreter(state, env):
                 env_name=env.configuration.scenario_name,
                 stacked=False,
                 # We use 'raw' representation to transfer data between server and agents.
-                representation='raw',
+                representation=env.configuration.representation,
                 logdir=path.join(env.configuration.logdir, env.configuration.id),
                 write_goal_dumps=False,
                 write_full_episode_dumps=env.configuration.save_video,
